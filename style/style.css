@@ -1,0 +1,85 @@
+/* Définition de la taille de la police de base et de l'image de fond pour la page */
+html, body {
+  font-size: 10px;
+  background: url('../assets/image/drumkit-wallpaper.jpg') center center;
+  background-size: cover;
+  background-attachment: fixed; /* Fixe l'image de fond pour qu'elle couvre tout l'écran */
+  background-repeat: no-repeat;
+  height: 100%; /* Assure que le fond couvre toute la hauteur */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteneur principal pour les touches, centré verticalement et horizontalement */
+.keys {
+  display: grid; /* Utilise CSS Grid pour l'alignement */
+  grid-template-columns: repeat(3, 1fr); /* Crée une grille de 3 colonnes */
+  grid-template-rows: repeat(3, auto); /* Crée une grille de 3 lignes */
+  gap: 2rem; /* Espace entre les touches */
+  justify-items: center; /* Centre les touches horizontalement */
+  align-items: center; /* Centre les touches verticalement */
+}
+
+/* Style des touches */
+.key {
+  border: .4rem solid black; /* Bordure noire épaisse */
+  border-radius: .5rem; /* Bords arrondis */
+  padding: 1rem .5rem; /* Espacement interne */
+  transition: all .07s ease; /* Transition douce pour les animations */
+  width: 10rem; /* Largeur fixe des touches */
+  text-align: center; /* Centrer le texte */
+  color: white; /* Couleur du texte */
+  background: rgba(0,0,0,0.4); /* Fond semi-transparent noir */
+  text-shadow: 0 0 .5rem black; /* Ombre portée sur le texte */
+  cursor: pointer; /* Curseur de la souris en forme de main */
+}
+
+.key:active {
+  box-shadow: inset 6px 6px 12px #505b63, inset -6px -6px 12px #728894; /* Ombre portée à l'intérieur lors du clic */
+}
+
+/* Styles pour des écrans de largeur maximale de 768px */
+@media (max-width: 768px) {
+  .keys {
+    grid-template-columns: repeat(2, 1fr); /* Change la grille à 2 colonnes pour les petits écrans */
+  }
+  .key {
+    width: 8rem; /* Réduire la largeur des touches */
+    font-size: 1.2rem; /* Réduire la taille de la police */
+  }
+}
+
+/* Styles pour des écrans de largeur maximale de 480px */
+@media (max-width: 480px) {
+  .keys {
+    grid-template-columns: 1fr; /* Change la grille à 1 colonne pour les très petits écrans */
+  }
+  .key {
+    width: 6rem; /* Réduire encore plus la largeur des touches */
+    font-size: 1rem; /* Réduire encore plus la taille de la police */
+  }
+}
+
+/* Classe ajoutée lors de l'appui sur une touche pour l'animation */
+.playing {
+  transform: scale(1.1); /* Agrandit la touche */
+  border-color: #ffc600; /* Change la couleur de la bordure */
+  box-shadow: 0 0 1rem #ffc600; /* Ajoute une ombre colorée */
+}
+
+/* Style pour les éléments <kbd> (les lettres sur les touches) */
+kbd {
+  display: block; /* Affichage en bloc pour prendre toute la largeur disponible */
+  font-size: 4rem; /* Grande taille de police */
+}
+
+/* Style pour les éléments de texte affichant le son */
+.sound {
+  font-size: 1.2rem; /* Taille de police plus petite */
+  text-transform: uppercase; /* Transforme le texte en majuscules */
+  letter-spacing: .1rem; /* Espacement entre les lettres */
+  color: #ffc600; /* Couleur du texte */
+}

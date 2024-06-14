@@ -2,58 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Meuhbox</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sound Box</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-  <div class="keys">
-    <div data-key="81" class="key">
+  <div class="keys" role="presentation">
+    <div data-key="81" class="key" aria-label="Kick" role="button" tabindex="0">
       <kbd>Q</kbd>
-      <span class="sound">Ane</span>
+      <span class="sound">Kick</span>
     </div>
-    <div data-key="83" class="key">
+    <div data-key="83" class="key" aria-label="Crash" role="button" tabindex="0">
       <kbd>S</kbd>
-      <span class="sound">Canard</span>
+      <span class="sound">Crash</span>
     </div>
-    <div data-key="68" class="key">
+    <div data-key="68" class="key" aria-label="ClosedHat" role="button" tabindex="0">
       <kbd>D</kbd>
-      <span class="sound">Chat</span>
+      <span class="sound">ClosedHat</span>
     </div>
-    <div data-key="70" class="key">
+    <div data-key="70" class="key" aria-label="OpenHat" role="button" tabindex="0">
       <kbd>F</kbd>
-      <span class="sound">chien</span>
+      <span class="sound">OpenHat</span>
     </div>
-    <div data-key="71" class="key">
+    <div data-key="71" class="key" aria-label="Rim" role="button" tabindex="0">
       <kbd>G</kbd>
-      <span class="sound">Grillon</span>
+      <span class="sound">Rim</span>
     </div>
-    <div data-key="72" class="key">
+    <div data-key="72" class="key" aria-label="Shaker" role="button" tabindex="0">
       <kbd>H</kbd>
-      <span class="sound">Mouton</span>
+      <span class="sound">Shaker</span>
     </div>
-    <div data-key="74" class="key">
+    <div data-key="74" class="key" aria-label="Snare" role="button" tabindex="0">
       <kbd>J</kbd>
-      <span class="sound">Perruche</span>
+      <span class="sound">Snare</span>
     </div>
-    <div data-key="75" class="key">
+    <div data-key="75" class="key" aria-label="Triangle" role="button" tabindex="0">
       <kbd>K</kbd>
-      <span class="sound">Poule</span>
+      <span class="sound">Triangle</span>
     </div>
-    <div data-key="76" class="key">
+    <div data-key="76" class="key" aria-label="Tambourine" role="button" tabindex="0">
       <kbd>L</kbd>
-      <span class="sound">Vache</span>
+      <span class="sound">Tambourine</span>
     </div>
   </div>
 
-  <audio id="81" src="sounds/ane.wav"></audio>
-  <audio id="83" src="sounds/canard.wav"></audio>
-  <audio id="68" src="sounds/chat.wav"></audio>
-  <audio id="70" src="sounds/chien.wav"></audio>
-  <audio id="71" src="sounds/grillon.wav"></audio>
-  <audio id="72" src="sounds/mouton.wav"></audio>
-  <audio id="74" src="sounds/perruche.wav"></audio>
-  <audio id="75" src="sounds/poule.wav"></audio>
-  <audio id="76" src="sounds/vache.wav"></audio>
+  <audio id="81" src="./assets/sounds/KickTrapUrbanFinest.wav"></audio>
+  <audio id="83" src="./assets/sounds/CrashTrapUrbanFinest.wav"></audio>
+  <audio id="68" src="./assets/sounds/ClosedHatTrapUrbanFinest.wav"></audio>
+  <audio id="70" src="./assets/sounds/OpenHatTrapUrbanFinest.wav"></audio>
+  <audio id="71" src="./assets/sounds/RimTrapUrbanFinest.wav"></audio>
+  <audio id="72" src="./assets/sounds/ShakerTrapUrbanFinest.wav"></audio>
+  <audio id="74" src="./assets/sounds/SnareTrapUrbanFinest.wav"></audio>
+  <audio id="75" src="./assets/sounds/TriangleTrapUrbanFinest.wav"></audio>
+  <audio id="76" src="./assets/sounds/TambourinePostRockDragons.wav"></audio>
 
   <script src="./script/event.listener.js"></script>
   <noscript>You need to enable JavaScript to experience the full site.</noscript>
